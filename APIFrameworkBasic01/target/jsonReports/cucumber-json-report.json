@@ -1,0 +1,114 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-10-20T12:25:03.723Z",
+        "before": [
+          {
+            "result": {
+              "duration": 9062000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.generatePlaceIdForDelete()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Validate if Delete Place functionality is working",
+        "description": "",
+        "id": "validation-place-apis;validate-if-delete-place-functionality-is-working",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Delete Place Payload",
+            "match": {
+              "location": "StepDefinitions.StepsDef.delete_Place_Payload()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2371000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "User calls \"DeletePlaceAPI\" to \"POST\" http add request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DeletePlaceAPI",
+                  "offset": 12
+                },
+                {
+                  "val": "POST",
+                  "offset": 32
+                }
+              ],
+              "location": "StepDefinitions.StepsDef.user_calls_resources_to_something_http_add_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "The API call gets success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 43
+                }
+              ],
+              "location": "StepDefinitions.StepsDef.the_API_call_gets_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "The \"status\" of response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 4
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 33
+                }
+              ],
+              "location": "StepDefinitions.StepsDef.the_of_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeletePlace"
+          }
+        ]
+      }
+    ],
+    "name": "Validation Place APIs",
+    "description": "",
+    "id": "validation-place-apis",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Features/AddAPIValidations.feature",
+    "tags": []
+  }
+]
